@@ -1,0 +1,595 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Setting Up the RS232 Interface</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name="template" content="Atmel Template.htt">
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1740>
+<meta name=layout-width content=737>
+
+
+<!--(Links)=========================================================-->
+
+ <link rel='stylesheet' href='atmel_standard_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='atmel_standard.css'>");}
+//-->
+</script>
+<style type="text/css">
+<!--
+img_whs1 {border: none; margin-top: 0px; margin-bottom: 0px; width: 239px; height: 160px; margin-left: 20px; margin-right: 20px; border-style: none; float: left; border-style: none; float: left;}
+img_whs2 {border: none; margin-left: 20px; margin-right: 0px; margin-top: 10px; margin-bottom: 10px; width: 231px; height: 119px; float: none; border-style: none; border-style: none;}
+p.whs3 {margin-right: 37px;}
+table.whs4 {x-cell-content-align: top; width: 100%; border-spacing: 0px; border-spacing: 0px;}
+col.whs5 {width: 10%;}
+tr.whs6 {x-cell-content-align: top;}
+td.whs7 {width: 10%; background-color: #008000; border-left-style: Solid; border-left-color: #000000; border-left-width: 1px; border-top-width: 1px; border-top-color: #000000; border-top-style: Solid; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+p.whs8 {color: #ffffff; text-align: center;}
+td.whs9 {width: 10%; background-color: #008000; border-top-width: 1px; border-top-color: #000000; border-top-style: Solid; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+td.whs10 {width: 10%; background-color: #ffff00; border-left-style: Solid; border-left-color: #000000; border-left-width: 1px; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+p.whs11 {text-align: center;}
+td.whs12 {width: 10%; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+p.whs13 {text-align: center; color: #ffffff;}
+img_whs14 {border: none; margin-left: 20px; margin-top: 0px; margin-bottom: 0px; width: 239px; height: 160px; margin-right: 20px; border-style: none; float: left; border-style: none; float: left;}
+ol.whs15 {list-style: decimal;}
+div.whs16 {width: 100%; }
+p.whs17 {text-align: right;}
+img_whs18 {border: none; height: 62px; width: 135px; float: none; border-style: none; border-style: none;}
+-->
+</style>
+<script type="text/javascript" language="JavaScript">
+<!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+{
+  var strNSS = "<style type='text/css'>";
+  strNSS += "img_whs1 {margin-top:1;margin-bottom:1; }";
+  strNSS += "img_whs2 {margin-right:1; }";
+  strNSS += "img_whs14 {margin-top:1;margin-bottom:1; }";
+  strNSS +="</style>";
+  document.write(strNSS);
+}
+//-->
+</script>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Flip User's Manual\nSetting Up the RS232 Interface");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("overview.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1>Setting Up the RS232 Interface</h1>
+
+<h4>&nbsp;<script type="text/javascript" language="JavaScript"><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='image2.gif' x-maintain-ratio='TRUE' width='239px' height='160px' align='left' border='0' class='img_whs1'>");}
+else
+{   document.write("<img src='image2.gif' x-maintain-ratio='TRUE' style='margin-top:0px;margin-bottom:0px;margin-left:20px;margin-right:20px;' width='239px' height='160px' align='left' border='0' class='img_whs1'>");}
+//--></script><noscript><img src='image2.gif' x-maintain-ratio='TRUE' style='margin-top:0px;margin-bottom:0px;margin-left:20px;margin-right:20px;' width='239px' height='160px' align='left' border='0' class='img_whs1'></noscript></h4>
+
+<p>&nbsp;</p>
+
+<p>Select a communication port, adjust the baudrate, and click <span style="font-weight: bold;"><B>Connect</B></span>.</p>
+
+<p>FLIP starts a synchronization sequence with the target device bootloader 
+ software. On completion of the sync sequence, FLIP reads the target device 
+ special bytes and updates the device parameters area.</p>
+
+<p>&nbsp;</p>
+
+<p>If the synchronization sequence fails, you will get the following error 
+ message :</p>
+
+<p><script type="text/javascript" language="JavaScript"><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='image22.jpg' x-maintain-ratio='TRUE' width='231px' height='119px' border='0' class='img_whs2'>");}
+else
+{   document.write("<img src='image22.jpg' x-maintain-ratio='TRUE' style='margin-left:20px;margin-right:0px;margin-top:10px;margin-bottom:10px;' width='231px' height='119px' border='0' class='img_whs2'>");}
+//--></script><noscript><img src='image22.jpg' x-maintain-ratio='TRUE' style='margin-left:20px;margin-right:0px;margin-top:10px;margin-bottom:10px;' width='231px' height='119px' border='0' class='img_whs2'></noscript></p>
+
+<h2>Setting the baudrate</h2>
+
+<p class="whs3">The baudrate must be choosen with care : 
+ if the target hardware oscillator frequency is too low, the bootloader 
+ cannot achieve characters reception/transmission and FLASH programming 
+ properly. FLIP will warn you through a message box if such a situation 
+ occurs.</p>
+
+<p class="whs3">In such cases, you have to decrease the 
+ baudrate.</p>
+
+<p>The following tables show the valid oscillator frequencies versus baudrate 
+ which allow a secured RS232 transmission.</p>
+
+<p>&nbsp;</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells cellspacing="0" width="100%" class="whs4">
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table><table x-use-null-cells cellspacing='0' width='100%' border='1' bordercolor='black' bordercolorlight='black' bordercolordark='black'>");
+//--></script>
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+
+<tr valign="top" class="whs6">
+<td bgcolor="#008000" width="10%" class="whs7">
+<p align="center" class="whs8">&nbsp;</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">1.8432</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">2</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">2.4576</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">3.6864</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">4</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">5</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">6</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">7.3728</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs8">8</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">4800</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">9600</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">19200</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">38400</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">57600</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">115200</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td></tr>
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
+//--></script>
+</table>
+
+<p>&nbsp;&nbsp;</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells cellspacing="0" width="100%" class="whs4">
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table><table x-use-null-cells cellspacing='0' width='100%' border='1' bordercolor='black' bordercolorlight='black' bordercolordark='black'>");
+//--></script>
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+<col class="whs5">
+
+<tr valign="top" class="whs6">
+<td bgcolor="#008000" width="10%" class="whs7">
+<p align="center" class="whs11">&nbsp;</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">10</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">11.0592</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">12</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">14.318</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">14.746</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">16</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">20</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">24</td>
+<td bgcolor="#008000" width="10%" class="whs9">
+<p align="center" class="whs13">32</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">4800</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">9600</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">19200</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">38400</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">57600</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs10">
+<p align="center" class="whs11">115200</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">-</td>
+<td width="10%" class="whs12">
+<p align="center" class="whs11">OK</td></tr>
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
+//--></script>
+</table>
+
+<p>Note that these tables show guaranteed frequency / baudrate pairs. On 
+ recent versions of bootloaders, the autobaud calculation algorithm has 
+ been improved, reducing the number of non compatible frequency / baudrate 
+ pairs. Please consult the bootloader specification or the device data-sheet 
+ for up-to-date information.</p>
+
+<h2>Setting Manual Synchronization</h2>
+
+<p><script type="text/javascript" language="JavaScript"><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) <= 4)) 
+{  if (parseInt(navigator.appVersion) != 2) document.write("<img src='image5.gif' x-maintain-ratio='TRUE' width='239px' height='160px' align='left' border='0' class='img_whs14'>");}
+else
+{   document.write("<img src='image5.gif' x-maintain-ratio='TRUE' style='margin-left:20px;margin-top:0px;margin-bottom:0px;margin-right:20px;' width='239px' height='160px' align='left' border='0' class='img_whs14'>");}
+//--></script><noscript><img src='image5.gif' x-maintain-ratio='TRUE' style='margin-left:20px;margin-top:0px;margin-bottom:0px;margin-right:20px;' width='239px' height='160px' align='left' border='0' class='img_whs14'></noscript></p>
+
+<p>It may happen, particularly on Laptop machines, that the UART Tx signal 
+ toggle when opening the port, launching the bootloader's baudrate calculation 
+ routine before FLIP sends the synchronization character. This unexpected 
+ behaviour produces erroneous baudrate calculation results.</p>
+
+<p>FLIP offers the capability of controlling the order of operations during 
+ the synchronization steps.</p>
+
+<p>&nbsp;</p>
+
+<h3>Sequence of Operations</h3>
+
+<p>In order to manually control the synchronization process, perform the 
+ following steps :</p>
+
+<ol start="1" type="1" class="whs15">
+	
+	<li class=kadov-p><p>Check the <span style="font-weight: bold;"><B>Manual 
+ Sync</B></span> checkbox.</p></li>
+	
+	<li class=kadov-p><p>Click <span style="font-weight: bold;"><B>Connect</B></span><span 
+ style="font-style: italic;"> <I></I></span>(FLIP opens the RS232 port but does 
+ not send the sync character).</p></li>
+	
+	<li class=kadov-p><p>Verify that the hardware conditions are properly 
+ set on the target system.</p></li>
+	
+	<li class=kadov-p><p>Reset the target system.</p></li>
+	
+	<li class=kadov-p><p>Click <span style="font-weight: bold;"><B>Sync</B></span><span 
+ style="font-style: italic;"> <I></I></span>(FLIP sends the sync character).</p></li>
+</ol>
+
+<h3>Manual Synchronization and AutoISP</h3>
+
+<p><span style="font-style: italic;"><I>Manual Sync</I></span> and <span style="font-style: italic;"><I><a href="setting_up_the_autoisp_mode.htm">AutoIsp</a></I></span> are incompatible 
+ operating modes. If <span style="font-style: italic;"><I>AutoIsp</I></span> has 
+ been activated, the <span style="font-style: italic;"><I>Manual Sync</I></span> 
+ checkbox is disabled.</p>
+
+<p>&nbsp;</p>
+
+<div placeholder id="footer" class="whs16">
+ <p align="right" class="whs17"><img src="atmel_rvb.gif" x-maintain-ratio="TRUE" height="62px" width="135px" border="0" class="img_whs18"></p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body>
+
+</html>

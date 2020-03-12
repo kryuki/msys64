@@ -1,0 +1,173 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Setting Preferences</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name="template" content="Atmel Template.htt">
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=2374>
+<meta name=layout-width content=976>
+
+
+<!--(Links)=========================================================-->
+
+ <link rel='stylesheet' href='atmel_standard_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='atmel_standard.css'>");}
+//-->
+</script>
+<style type="text/css">
+<!--
+img_whs1 {border: none; width: 380px; height: 400px; float: none;}
+div.whs2 {width: 100%; }
+p.whs3 {text-align: right;}
+img_whs4 {border: none; height: 62px; width: 135px; float: none; border-style: none; border-style: none;}
+-->
+</style>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Flip User's Manual\nSetting Preferences");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("overview.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1>Setting Preferences</h1>
+
+<p>From the top menu bar, execute <span style="font-weight: bold;"><B>Settings 
+ &gt; Preferences</B></span>.</p>
+
+<h2>RS232</h2>
+
+<p><img src="preferences_1.jpg" x-maintain-ratio="TRUE" width="380px" height="400px" border="0" class="img_whs1"></p>
+
+<p>The <span style="font-style: italic;"><I>RS232</I></span> tab lets you control 
+ the boot process hardware conditions if you enable the <span style="font-style: italic;"><I>AutoISP</I></span> 
+ mode by checking the <span style="font-style: italic;"><I>ISP Hardware Conditions 
+ Controlled by Flip</I></span> option.</p>
+
+<p>When the RS232 dialog pops up, Flip builds a list of available COM ports 
+ by trying to open them; if a port can be opened, it is added to the list. 
+ This process may take a while and you can control the span of the port 
+ scan process by setting the <span style="font-style: italic;"><I>Scan COM 
+ ports up to</I></span> text value.</p>
+
+<h2>Hex Format</h2>
+
+<p><img src="preferences_2.jpg" x-maintain-ratio="TRUE" width="380px" height="400px" border="0" class="img_whs1"></p>
+
+<p>The <span style="font-style: italic;"><I>Hex Format</I></span> tab lets you 
+ specify the HEX output file format (HEX 386 or HEX 86).</p>
+
+<h2>Time Out and Logging</h2>
+
+<p><img src="preferences_3.jpg" x-maintain-ratio="TRUE" width="380px" height="400px" border="0" class="img_whs1"></p>
+
+<p>The ISP operations performed by Flip are timed-out. In some uncommon 
+ circumstances, you may want to increase the time out duration. To do this, 
+ simply check the <span style="font-style: italic;"><I>Set New Timeout Value</I></span> 
+ option and enter the time-out value you want to work with.</p>
+
+<p>Check the <span style="font-style: italic;"><I>Log information to flip.log</I></span> 
+ option if you want to send to Atmel a log of the ISP activity in case 
+ of trouble using Flip. Please note that checking this option slows down 
+ Flip performances.</p>
+
+<h2>Connecting and closing</h2>
+
+<p><img src="preferences_4.jpg" x-maintain-ratio="TRUE" width="380px" height="400px" border="0" class="img_whs1"></p>
+
+<p>Check the <span style="font-style: italic;"><I>Auto-Connect</I></span> option 
+ if you want to connect automatically to the device the next time you launch 
+ Flip.</p>
+
+<p>Check the <span style="font-style: italic;"><I>On Time Out Error</I></span> 
+ option, if you want the communication to be closed<span style="font-style: italic;"> 
+ <I></I></span>when a communication time out occurs.</p>
+
+<p>Check the <span style="font-style: italic;"><I>On Embedded Application 
+ Start </I></span>option, if you want the communication to be closed when the 
+ embedded application starts.</p>
+
+<div placeholder id="footer" class="whs2">
+ <p align="right" class="whs3"><img src="atmel_rvb.gif" x-maintain-ratio="TRUE" height="62px" width="135px" border="0" class="img_whs4"></p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body>
+
+</html>

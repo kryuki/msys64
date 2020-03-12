@@ -1,0 +1,14 @@
+%FILES%
+mingw64/
+mingw64/include/
+mingw64/include/libelf/
+mingw64/include/libelf/elf_repl.h
+mingw64/include/libelf/gelf.h
+mingw64/include/libelf/libelf.h
+mingw64/include/libelf/nlist.h
+mingw64/include/libelf/sys_elf.h
+mingw64/lib/
+mingw64/lib/libelf.a
+mingw64/lib/pkgconfig/
+mingw64/lib/pkgconfig/libelf.pc
+

@@ -1,0 +1,308 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Getting Started</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name="template" content="Atmel Template.htt">
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=2023>
+<meta name=layout-width content=737>
+
+
+<!--(Links)=========================================================-->
+
+ <link rel='stylesheet' href='atmel_standard_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='atmel_standard.css'>");}
+//-->
+</script>
+<style type="text/css">
+<!--
+p.whs1 {margin-right: 56px; margin-left: 12px; text-indent: -12px;}
+p.whs2 {margin-left: 12px; margin-right: 56px; text-indent: -12px;}
+ul.whs3 {list-style: disc;}
+p.whs4 {margin-right: 56px; margin-left: 0px;}
+p.whs5 {margin-left: 12px; margin-right: 56px;}
+img_whs6 {border: none; width: 618px; height: 495px; border-style: none; border-style: none;}
+ol.whs7 {list-style: decimal;}
+p.whs8 {margin-right: 56px; margin-left: 52px;}
+p.whs9 {margin-right: 56px; margin-left: 12px;}
+ol.whs10 {list-style: inside decimal;}
+div.whs11 {width: 100%; }
+p.whs12 {text-align: right;}
+img_whs13 {border: none; height: 62px; width: 135px; float: none; border-style: none; border-style: none;}
+-->
+</style>
+<script type="text/javascript" language="JavaScript">
+<!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+{
+  var strNSS = "<style type='text/css'>";
+  strNSS += "p.whs1 {text-indent:1; }";
+  strNSS += "p.whs2 {text-indent:1; }";
+  strNSS += "p.whs4 {margin-left:1; }";
+  strNSS +="</style>";
+  document.write(strNSS);
+}
+//-->
+</script>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Flip User's Manual\nGetting Started");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("overview.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1>Getting Started</h1>
+
+<p class="whs1">This chapter guides you through a short 
+ tour of <span style="font-style: italic;"><I>FLIP</I></span> to help you getting 
+ started with this ISP software. </p>
+
+<p class="whs2">In the <span style="font-style: italic;"><I>FLIP</I></span> 
+ main window, you can see three frames from left to right :</p>
+
+<ul type="disc" class="whs3">
+	
+	<li class=kadov-p><p class="whs4">Operations 
+ flow</p></li>
+	
+	<li class=kadov-p><p class="whs4">Buffer 
+ information</p></li>
+	
+	<li class=kadov-p><p class="whs4">Device 
+ parameters </p></li>
+</ul>
+
+<p class="whs5"><img src="image1.jpg" width="618px" height="495px" border="0" class="img_whs6"></p>
+
+<p class="whs4">A message log window, 
+ a progress bar area and a communication information report are displayed 
+ in the bottom of the main window.</p>
+
+<ol type="1" class="whs7">
+	
+	<li class=kadov-p><p class="whs5">Connect 
+ your target hardware to the PC <a href="setting_up_the_rs232_interface.htm">RS232</a> 
+ port, <a href="setting_up_the_can_interface.htm">CAN</a> port or <a href="setting_up_the_usb_interface.htm">USB</a> 
+ one.</p></li>
+</ol>
+
+<p class="whs8">Turn the power supply 
+ on and reset the target microcontroller. We assume <span style="margin-left: 12px;">that 
+ the device to be programmed contains a FLIP compliant bootloader program. 
+ Hardware ISP will be discussed further in this manual; this introduction 
+ guide covers software ISP only.</span></p>
+
+<ol start="2" type="1" class="whs7">
+	
+	<li class=kadov-p><p class="whs5">Select 
+ a device from the device list :</p></li>
+</ol>
+
+<p class="whs8">From the top menu bar, 
+ execute <span style="font-weight: bold;"><B>Device &gt; Select</B></span>. <span 
+ style="margin-left: 12px;">The device selection dialog box pops up. Select 
+ a device from the devices list box and click OK.</span></p>
+
+<p class="whs8">As soon as the device 
+ is selected, the Device parameters area is updated and <span style="margin-left: 12px;">lets 
+ you see the device special bytes. The Buffer information area is updated 
+ as well with device dependent information.</span></p>
+
+<ol start="3" type="1" class="whs7">
+	
+	<li class=kadov-p><p class="whs5">Select 
+ a communication medium :</p></li>
+</ol>
+
+<p class="whs8">From the top menu bar, 
+ execute <span style="font-weight: bold;"><B>Settings &gt; </B></span><span style="font-weight: bold; margin-left: 12px;"><B>Communication</B></span><span 
+ style="margin-left: 12px;"> and select a medium.</span></p>
+
+<p class="whs8">The medium setup dialog 
+ box pops up. Adjust the communication <span style="margin-left: 12px; margin-right: 56px;">parameters, 
+ and click Connect.</span></p>
+
+<p class="whs8"><span style="font-style: italic;"><I>FLIP</I></span> 
+ starts a synchronization sequence with the target device bootloader <span 
+ style="margin-left: 12px;">software. After the synchronization sequence 
+ completion, FLIP reads the target device special bytes and updates the 
+ main window frame on the right.</span></p>
+
+<ol start="4" type="1" class="whs7">
+	
+	<li class=kadov-p><p class="whs5">Select 
+ a HEX data file :</p></li>
+</ol>
+
+<p class="whs8">From the top menu bar, 
+ execute <span style="font-weight: bold;"><B>File &gt; Load HEX File</B></span>...</p>
+
+<p class="whs8">Select a HEX file from 
+ the file browser. <span style="font-style: italic;"><I>FLIP</I></span> parses 
+ the HEX file and fills in <span style="margin-left: 12px;">the edition 
+ buffer.</span></p>
+
+<ol start="5" type="1" class="whs7">
+	
+	<li class=kadov-p><p class="whs5">Open 
+ the buffer edition window :</p></li>
+</ol>
+
+<p class="whs8">From the top menu bar, 
+ execute <span style="font-weight: bold;"><B>Buffer &gt; Edit</B></span><span 
+ style="margin-left: 12px;">.</span></p>
+
+<p class="whs8">The Edit Buffer window 
+ pops up. You may now perform many operations <span style="margin-left: 12px;">onto 
+ the buffer contents. For details about the possible buffer editing capabilities, 
+ see the section <a href="editing_the_buffer.htm">Editing the Buffer</a>.</span></p>
+
+<ol start="6" type="1" class="whs7">
+	
+	<li class=kadov-p><p class="whs5">Open 
+ the buffer options window :</p></li>
+</ol>
+
+<p class="whs8">You may open the buffer 
+ options window from the <span style="font-style: italic;"><I>FLIP</I></span> 
+ main window, or from <span style="margin-left: 12px;">the Edit Buffer 
+ dialog box.</span></p>
+
+<p class="whs8">From the main window 
+ menu bar, execute <span style="font-weight: bold;"><B>Buffer </B></span><span 
+ style="font-weight: bold; margin-left: 12px;"><B>&gt; Options</B></span><span 
+ style="margin-left: 12px;">. The Buffer Options dialog box pops up. The 
+ main buffer options are : </span></p>
+
+<ul type="disc" class="whs3">
+	
+	<li class=kadov-p><p class="whs8"><span 
+ style="margin-right: 56px; margin-left: 12px;">buffer size</span></p></li>
+	
+	<ul type="disc" class="whs3">
+		
+		<li class=kadov-p><p class="whs9">initial 
+ contents</p></li>
+		
+		<li class=kadov-p><p class="whs9">address 
+ programming range</p></li>
+	</ul>
+</ul>
+
+<p class="whs8">For details about these 
+ options, see the section <a href="setting_buffer_options.htm">Setting 
+ Buffer Options</a>.</p>
+
+<ol start="7" type="1" class="whs10">
+	
+	<li class=kadov-p><p class="whs5">Program 
+ the target device :</p></li>
+</ol>
+
+<p class="whs8">From the top menu bar, 
+ execute <span style="font-weight: bold;"><B>Device &gt;</B></span><span style="font-weight: bold; margin-left: 12px;"><B> 
+ Program</B></span><span style="margin-left: 12px;">.</span></p>
+
+<ol start="8" type="1" class="whs7">
+	
+	<li class=kadov-p><p class="whs9">Verify 
+ the target device :</p></li>
+</ol>
+
+<p class="whs8">From the top menu bar, 
+ execute <span style="font-weight: bold;"><B>Device &gt; Verify</B></span>.</p>
+
+<p class="whs4">This concludes our short 
+ tour of the <span style="font-style: italic;"><I>FLIP</I></span> demo. For detailed 
+ descriptions of the possible operations, please consult the <a href="operations_summary.htm">Operations 
+ Summary</a>.</p>
+
+<p class="whs5">&nbsp;</p>
+
+<p class="whs5">&nbsp;</p>
+
+<div placeholder id="footer" class="whs11">
+ <p align="right" class="whs12"><img src="atmel_rvb.gif" x-maintain-ratio="TRUE" height="62px" width="135px" border="0" class="img_whs13"></p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body>
+
+</html>

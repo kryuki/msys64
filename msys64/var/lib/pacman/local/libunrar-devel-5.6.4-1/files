@@ -1,0 +1,9 @@
+%FILES%
+usr/
+usr/include/
+usr/include/unrar/
+usr/include/unrar/dll.hpp
+usr/lib/
+usr/lib/libunrar.a
+usr/lib/libunrar.dll.a
+

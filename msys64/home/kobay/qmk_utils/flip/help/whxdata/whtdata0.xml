@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<book name="Flip User's Manual" >
+  <item name="Overview" url="index.htm" />
+  <item name="CAN Pre-Installation Requirements" url="can_pre-installation_requirements.htm" />
+  <item name="USB Driver Installation" url="usb_driver_installation.htm" />
+  <item name="Getting Started" url="getting_started.htm" />
+  <item name="Setting Preferences" url="setting_preferences.htm" />
+  <item name="Setting Buffer Options" url="setting_buffer_options.htm" />
+  <item name="Editing the Buffer" url="editing_the_buffer.htm" />
+  <item name="Setting Demo Mode" url="setting_demo_mode.htm" />
+  <item name="ISP Operations Summary" url="operations_summary.htm" />
+  <item name="Selecting a Device" url="selecting_a_device.htm" />
+  <item name="Selecting a Communication Medium" url="selecting_a_communication_medium.htm" />
+  <item name="Setting Up the RS232 Interface" url="setting_up_the_rs232_interface.htm" />
+  <item name="Setting Up the AutoISP Mode" url="setting_up_the_autoisp_mode.htm" />
+  <item name="Setting Up the CAN Interface" url="setting_up_the_can_interface.htm" />
+  <item name="Setting Up the USB Interface" url="setting_up_the_usb_interface.htm" />
+  <item name="Selecting the Target Memory" url="selecting_the_target_memory.htm" />
+  <item name="Erasing Memory" url="erasing_memory.htm" />
+  <item name="Blank Checking Memory" url="blank_checking_memory.htm" />
+  <item name="Loading a HEX File" url="loading_a_hex_file.htm" />
+  <item name="Programming Memory" url="programming_memory.htm" />
+  <item name="Verifying Memory" url="verifying_memory.htm" />
+  <item name="Reading Memory" url="reading_memory.htm" />
+  <item name="Using the Operations Flow" url="using_the_operations_flow.htm" />
+  <item name="Setting Special Bits and Bytes" url="setting_special_bits_and_bytes.htm" />
+</book>
+<book name="BatchIsp User's Manual" >
+  <item name="Overview" url="overview_1.htm" />
+  <item name="Getting Help" url="getting_help.htm" />
+  <item name="Setup Directives Summary" url="setup_directives_summary.htm" />
+  <item name="Operation Directives Summary" url="operations_directives_summary.htm" />
+  <item name="Setting the Demo Mode" url="setting_the_demo_mode.htm" />
+  <item name="Getting the Batchisp Program Version" url="getting_the_batchisp_program_version.htm" />
+  <item name="Logging Results to a File" url="logging_results_to_a_file.htm" />
+  <item name="Setting the Debug Mode" url="setting_the_debug_mode.htm" />
+  <item name="Setting the AutoISP Mode" url="setting_the_autoisp_mode.htm" />
+  <item name="Selecting a Device" url="selecting_a_device_batchisp.htm" />
+  <item name="Selecting an ISP Hardware" url="selecting_an_isp_hardware.htm" />
+  <item name="Selecting a Port" url="selecting_a_port.htm" />
+  <item name="Opening a CAN Node" url="opening_a_can_node.htm" />
+  <item name="Closing a CAN Node" url="closing_a_can_node.htm" />
+  <item name="Setting the CAN Bitrate" url="setting_the_can_bitrate.htm" />
+  <item name="Setting the RS232 Baudrate" url="setting_the_rs232_baudrate.htm" />
+  <item name="Using a Command File" url="using_a_command_file.htm" />
+  <item name="Selecting the Target Memory" url="selecting_the_target_memory_batchisp.htm" />
+  <item name="Specifying a Range of Addresses" url="specifying_a_range_of_addresses.htm" />
+  <item name="Erasing Memory" url="erasing_memory_batchisp.htm" />
+  <item name="Blank Checking Memory" url="blank_checking_memory_batchisp.htm" />
+  <item name="Loading the ISP Buffer" url="loading_the_isp_buffer.htm" />
+  <item name="Filling the Buffer" url="filling_the_buffer.htm" />
+  <item name="Programming Memory" url="programming_memory_batchisp.htm" />
+  <item name="Verifying Memory" url="verifying_memory_batchisp.htm" />
+  <item name="Reading Memory" url="reading_memory_batch.htm" />
+  <item name="Saving the Buffer Contents to a File" url="saving_the_buffer_contents_to_a_file.htm" />
+  <item name="Reading and Writing Special Bits and Bytes" url="reading_and_writing_special_bits_and_bytes.htm" />
+  <item name="Serializing Parts" url="serializing_parts.htm" />
+  <item name="Launching the Embedded Application" url="launching_the_embedded_application_batch.htm" />
+  <item name="Inserting Wait States" url="inserting_wait_states.htm" />
+  <item name="Setting Timeout" url="setting_timeout.htm" />
+  <item name="Changing the On Fail Behavior" url="changing_the_on_fail_behavior.htm" />
+  <item name="Asserting Operation Results" url="asserting_operation_results.htm" />
+</book>
+<book name="ISP Functions Library" >
+  <item name="Overview" url="overview_isplib.htm" />
+  <item name="Software Architecture" url="software_architecture.htm" />
+  <item name="Writing your own ISP application" url="isp_application.html" />
+</book>
+<book name="TroubleShooting" >
+  <item name="CAN Interfaces" url="can_interfaces.htm" />
+  <item name="RS232" url="rs232.htm" />
+  <item name="Trouble Shooting USB" url="trouble_shooting_usb.htm" />
+  <item name="FAQ" url="faq.htm" />
+</book>
+
+</tocdata>

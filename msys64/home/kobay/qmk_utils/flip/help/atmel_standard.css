@@ -1,0 +1,173 @@
+/*=(===============================================================)*/
+
+/*=(===============================================================)*/
+/*=(Created with RoboEditor.)=======================================*/
+/*=(===============================================================)*/
+
+H1 {
+	font-family: Arial, sans-serif;
+	x-next-class: ;
+	x-next-type: H1;
+	border-bottom-style: Solid;
+	background-color: Transparent;
+	text-transform: capitalize;
+	color: #0000ff;
+	border-bottom-width: 4px;
+	margin-top: 0pt;
+	margin-bottom: 4.5pt;
+	font-size: 14pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-H1 {
+	font-family: Arial, sans-serif;
+	text-transform: capitalize;
+	color: #0000ff;
+	font-size: 14pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+H2 {
+	font-family: Arial, sans-serif;
+	background-color: #ffffff;
+	color: #0000ff;
+	text-transform: capitalize;
+	font-size: 12pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-H2 {
+	font-family: Arial, sans-serif;
+	color: #0000ff;
+	text-transform: capitalize;
+	font-size: 12pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+H3 {
+	font-family: Arial, sans-serif;
+	color: #0000ff;
+	font-size: 11pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-H3 {
+	font-family: Arial, sans-serif;
+	color: #0000ff;
+	font-size: 11pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+BODY {
+	background-color: #ffffff;
+}
+
+H4 {
+	font-family: Arial, sans-serif;
+	color: #0000ff;
+	font-size: 10pt;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-H4 {
+	font-family: Arial, sans-serif;
+	color: #0000ff;
+	font-size: 10pt;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.Code {
+	font-family: "Courier New", monospace;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CCode {
+	font-family: "Courier New", monospace;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.TableTitle {
+	letter-spacing: normal;
+	text-transform: capitalize;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	text-align: Center;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CTableTitle {
+	letter-spacing: normal;
+	text-transform: capitalize;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	text-align: Center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+P.TableBody {
+	font-size: 10pt;
+	text-align: Center;
+}
+
+/*=(Generated Code)=================================================*/
+/*=(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)===================*/
+/*begin!kadov{{=====================================================*/ 
+LI.kadov-P-CTableBody {
+	font-size: 10pt;
+	text-align: Center;
+}
+/*}}end!kadov=======================================================*/ 
+
+
+
+OL,
+UL {
+	font-size: 10pt;
+	margin-left: 0.5in;
+	font-family: "Arial Black", sans-serif;
+}
+
+
+/*=(===============================================================)*/

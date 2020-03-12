@@ -1,0 +1,217 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Writing your own ISP application</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name="template" content="Atmel Template.htt">
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1197>
+<meta name=layout-width content=953>
+
+
+<!--(Links)=========================================================-->
+
+ <link rel='stylesheet' href='atmel_standard_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='atmel_standard.css'>");}
+//-->
+</script>
+<style type="text/css">
+<!--
+ul.whs1 {list-style: disc;}
+div.whs2 {width: 100%; }
+p.whs3 {text-align: right;}
+img_whs4 {border: none; height: 62px; width: 135px; float: none; border-style: none; border-style: none;}
+-->
+</style>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("ISP Functions Library\nWriting your own ISP application");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("overview.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1>Writing your own iSP application</h1>
+
+<p>You may write your own ISP tool and release it to your customers without 
+ forcing them to pre-install Flip, but you have to know a little about 
+ the Flip package organization and dependencies to do that. This is explained 
+ in the following paragraphs.</p>
+
+<p>Flip, Batchisp and your own ISP application (even if it is written in 
+ C) all require a JRE to be installed (V1.5 or above). This is because, 
+ among several reasons, Atmel devices, the Flip GUI and Atmel ISP protocols 
+ are described in XML files parsed by Java XML parsers. Two Flip installers 
+ are available from the Atmel’s WEB site: a light one without JRE, and 
+ a heavy one, embedding a JRE. The JRE is installed by the Flip installer, 
+ if no valid JRE can be found on the user’s machine.</p>
+
+<p>Actually, you have to include almost everything from the Flip package 
+ into yours and, most importantly, keep the Flip package structure as is.</p>
+
+<p>Have a look to the \bin directory of the Flip package :</p>
+
+<ul type="disc" class="whs1">
+	
+	<li class=kadov-p><p>The \ <span style="font-style: italic;"><I>GuiDescriptionFiles</I></span> 
+ folder contains XML files used to build a part of the Flip GUI. You don’t 
+ need these files because either your application has no GUI, either it 
+ has one probably not written in Java, or written in Java, but you don’t 
+ want these complex XML features.</p></li>
+	
+	<li class=kadov-p><p>The \ <span style="font-style: italic;"><I>PartDescriptionFiles</I></span> 
+ folder contains … part description files. You may remove unused part files 
+ from this folder. In the XML files you keep, remove the “<span style="font-style: italic;"><I>Gui 
+ FILE</I></span>” element, since you have discarded XML GUI description files.</p></li>
+	
+	<li class=kadov-p><p>The \ <span style="font-style: italic;"><I>ProtocolDescriptionFiles</I></span> 
+ contains several XML files; open the XML part description files you intend 
+ to keep, look at the protocols they use (indicated by the “<span style="font-style: italic;"><I>Protocol 
+ FILE</I></span>” XML element). You may discard all unused XML protocol files.</p></li>
+	
+	<li class=kadov-p><p>If you are preparing an ISP package for CAN devices, 
+ keep the <span style="font-style: italic;"><I>AtCan</I></span>*.dll files, as 
+ well as <span style="font-style: italic;"><I>GetPCANHW</I></span>.dll, <span 
+ style="font-style: italic;"><I>vcand32</I></span>.dll and <span style="font-style: italic;"><I>Vci11un6</I></span>.dll; 
+ otherwise you may remove these files from your package.</p></li>
+	
+	<li class=kadov-p><p>If you want to support USB device, then you have 
+ to keep the <span style="font-style: italic;"><I>AtLibUsbDfu</I></span>.dll file.</p></li>
+	
+	<li class=kadov-p><p>Keep <span style="font-style: italic;"><I>AtJniIsp</I></span>.dll 
+ in any case, this is the main DLL of the Flip package; it contains all 
+ <span style="font-style: italic;"><I>ispXXX</I></span> functions as described 
+ in the demo program.</p></li>
+	
+	<li class=kadov-p><p>Remove <span style="font-style: italic;"><I>batchisp.exe</I></span></p></li>
+	
+	<li class=kadov-p><p>Keep <span style="font-style: italic;"><I>Flip.exe</I></span> 
+ in any case; all the Flip Java classes are embedded in a Jar file, itself 
+ encapsulated in the <span style="font-style: italic;"><I>Flip.exe</I></span> 
+ file.</p></li>
+	
+	<li class=kadov-p><p>Keep <span style="font-style: italic;"><I>jfrw*.dll</I></span>, 
+ <span style="font-style: italic;"><I>msv*.dll</I></span> and <span style="font-style: italic;"><I>util.jar</I></span> 
+ files.</p></li>
+</ul>
+
+<p>You will probably not include the following folders into your package 
+ or you will provide them with your own content : \<span style="font-style: italic;"><I>demo</I></span>, 
+ \<span style="font-style: italic;"><I>help</I></span> and \<span style="font-style: italic;"><I>info</I></span>. 
+ You have to keep the \<span style="font-style: italic;"><I>usb</I></span> folder 
+ if you have to support USB devices.</p>
+
+<p>Your installation script will have to update the final user’s Path variable 
+ with &lt;<span style="font-style: italic;"><I>your_package_install_dir</I></span>&gt;\<span 
+ style="font-style: italic;"><I>bin</I></span> folder path</p>
+
+<p>Another important path-related topic is the way Java finds the classes 
+ to be loaded. Although your program is written in C, or C++, or maybe 
+ VB, you need some Java classes embedded in the <span style="font-style: italic;"><I>Flip.exe</I></span> 
+ file. We get path information from the flip.exe/Path key in order to set 
+ the Java Classpath variable programmatically. This is necessary for native 
+ applications like <span style="font-style: italic;"><I>batchisp</I></span> and 
+ ISP programs like yours, which call this function in order to create a 
+ JVM and find the Flip class.</p>
+
+<p>The <span style="font-style: italic;"><I>ispInit</I></span>() function (which 
+ should be called before any other one) checks the existence of &nbsp;a 
+ Windows Registry key named <span style="font-style: italic;"><I>flip.exe</I></span>. 
+ The <span style="font-style: italic;"><I>flip.exe</I></span> key is located under 
+ <span style="font-style: italic;"><I>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\App 
+ Paths</I></span>. Launch the Windows <span style="font-style: italic;"><I>regedit</I></span> 
+ utility, go to this location then select <span style="font-style: italic;"><I>flip.exe</I></span>. 
+ This key contains a Path string which value is the Flip package installation 
+ directory. This is where we get information to update the Java ClassPath.</p>
+
+<p>Either your ISP program installation script creates the <span style="font-style: italic;"><I>flip.exe</I></span> 
+ key in the Registry in the proper location, or you may call the <span 
+ style="font-style: italic;"><I>ispInitNoCheck</I></span>() function which does 
+ not perform the Registry check, but you will have to find a solution to 
+ update the Java ClassPath.</p>
+
+<p>&nbsp;</p>
+
+<div placeholder id="footer" class="whs2">
+ <p align="right" class="whs3"><img src="atmel_rvb.gif" x-maintain-ratio="TRUE" height="62px" width="135px" border="0" class="img_whs4"></p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body>
+
+</html>

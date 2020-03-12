@@ -1,0 +1,434 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Serializing Parts</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name="template" content="Atmel Template.htt">
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1351>
+<meta name=layout-width content=915>
+
+
+<!--(Links)=========================================================-->
+
+ <link rel='stylesheet' href='atmel_standard_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='atmel_standard.css'>");}
+//-->
+</script>
+<style type="text/css">
+<!--
+table.whs1 {x-cell-content-align: top; width: 100%; border-spacing: 0px; border-spacing: 0px;}
+col.whs2 {width: 10.852%;}
+col.whs3 {width: 14.366%;}
+col.whs4 {width: 15.062%;}
+col.whs5 {width: 59.738%;}
+tr.whs6 {x-cell-content-align: top;}
+td.whs7 {width: 10.852%; background-color: #008000; border-left-style: Solid; border-left-color: #000000; border-left-width: 1px; border-top-width: 1px; border-top-color: #000000; border-top-style: Solid; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px; x-cell-content-align: center;}
+p.whs8 {color: #ffffff; text-align: Center;}
+td.whs9 {width: 14.366%; background-color: #008000; border-top-width: 1px; border-top-color: #000000; border-top-style: Solid; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px; x-cell-content-align: center;}
+td.whs10 {width: 15.062%; background-color: #008000; border-top-width: 1px; border-top-color: #000000; border-top-style: Solid; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px; x-cell-content-align: center;}
+td.whs11 {width: 59.738%; background-color: #008000; border-top-width: 1px; border-top-color: #000000; border-top-style: Solid; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px; x-cell-content-align: center;}
+td.whs12 {width: 10.852%; background-color: #ffff00; border-left-style: Solid; border-left-color: #000000; border-left-width: 1px; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+p.whs13 {text-align: Center;}
+td.whs14 {width: 14.366%; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+td.whs15 {width: 15.062%; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+td.whs16 {width: 59.738%; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+p.whs17 {font-size: 12pt;}
+p.whs18 {font-weight: bold;}
+p.whs19 {margin-left: 40px; font-weight: bold;}
+p.whs20 {margin-left: 40px;}
+col.whs21 {width: 10%;}
+td.whs22 {width: 10%; background-color: #008000; border-left-style: Solid; border-left-color: #000000; border-left-width: 1px; border-top-width: 1px; border-top-color: #000000; border-top-style: Solid; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+p.whs23 {color: #ffffff; font-weight: bold;}
+td.whs24 {width: 10%; background-color: #008000; border-top-width: 1px; border-top-color: #000000; border-top-style: Solid; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+p.whs25 {font-weight: bold; color: #ffffff;}
+td.whs26 {width: 10%; background-color: #ffff00; border-left-style: Solid; border-left-color: #000000; border-left-width: 1px; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+td.whs27 {width: 10%; border-right-style: Solid; border-right-color: #000000; border-right-width: 1px; border-bottom-width: 1px; border-bottom-color: #000000; border-bottom-style: Solid; padding-right: 10px; padding-left: 10px;}
+div.whs28 {width: 100%; }
+p.whs29 {text-align: right;}
+img_whs30 {border: none; height: 62px; width: 135px; float: none; border-style: none; border-style: none;}
+-->
+</style>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("BatchIsp User's Manual\nSerializing Parts");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("overview.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1>Serializing Parts</h1>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells cellspacing="0" width="100%" class="whs1">
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table><table x-use-null-cells cellspacing='0' width='100%' border='1' bordercolor='black' bordercolorlight='black' bordercolordark='black'>");
+//--></script>
+<col class="whs2">
+<col class="whs3">
+<col class="whs4">
+<col class="whs5">
+
+<tr valign="top" class="whs6">
+<td valign="middle" bgcolor="#008000" width="10.852%" class="whs7">
+<p align="center" class="whs8">TYPE</td>
+<td valign="middle" bgcolor="#008000" width="14.366%" class="whs9">
+<p align="center" class="whs8">DIRECTIVE</td>
+<td valign="middle" bgcolor="#008000" width="15.062%" class="whs10">
+<p align="center" class="whs8">OPTIONAL</td>
+<td valign="middle" bgcolor="#008000" width="59.738%" class="whs11">
+<p align="center" class="whs8">ARGUMENTS</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10.852%" class="whs12">
+<p align="center" class="whs13">Operation</td>
+<td width="14.366%" class="whs14">
+<p align="center" class="whs13">serialize</td>
+<td width="15.062%" class="whs15">
+<p align="center" class="whs13">Yes</td>
+<td width="59.738%" class="whs16">
+<p class="whs17">&lt;dest_addr&gt; &lt;serial_number&gt; &lt;format&gt; 
+ &lt;step&gt;</td></tr>
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
+//--></script>
+</table>
+
+<p>The <span style="font-style: italic;"><I>serialize </I></span>directive<span 
+ style="font-style: italic;"> <I></I></span>is used to store a serial number into 
+ the target device memory selected by the <span style="font-style: italic;"><I><a href="selecting_the_target_memory_batchisp.htm">memory</a></I></span> directive.</p>
+
+<p><span style="font-weight: bold;"><B>This directive can only be used in 
+ a command file</B></span>.</p>
+
+<p>&lt;dest_addr&gt; = address of the serial number Most Significant Byte.</p>
+
+<p>&lt;serial_number&gt; = current value of the serial number; this value 
+ will be incremented (or decremented, following the value of &lt;step&gt;) 
+ and the command file updated with the new SN value. Therefore, you can 
+ suspend and resume the serialization of parts at any time; the command 
+ file always contains the next SN to be written.</p>
+
+<p class="whs18">8 bits &lt;= SN Length &lt;= 64 bits</p>
+
+<p class="whs18">The SN value must be written in decimal or 
+ hexadecimal; no other format is allowed.<span style="font-weight: bold;"><B> 
+ Hexadecimal serial number values must be prefixed with 0x.</B></span></p>
+
+<p>&lt;format&gt; = number | ascii | unicode</p>
+
+<p class="whs19">number :</p>
+
+<p class="whs20">if SN = 123456, the memory content after 
+ serialization is:</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells cellspacing="0" width="100%" class="whs1">
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table><table x-use-null-cells cellspacing='0' width='100%' border='1' bordercolor='black' bordercolorlight='black' bordercolordark='black'>");
+//--></script>
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+
+<tr valign="top" class="whs6">
+<td bgcolor="#008000" width="10%" class="whs22">
+<p class="whs23">Address</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 1</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 2</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 3</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 4</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 5</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p>&nbsp;</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p>&nbsp;</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p>&nbsp;</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs26">
+<p>Data</td>
+<td width="10%" class="whs27">
+<p>12</td>
+<td width="10%" class="whs27">
+<p>34</td>
+<td width="10%" class="whs27">
+<p>56</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td></tr>
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
+//--></script>
+</table>
+
+<p class="whs19">ascii :</p>
+
+<p class="whs20">if SN = 123456, the memory content after 
+ serialization is:</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells cellspacing="0" width="100%" class="whs1">
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table><table x-use-null-cells cellspacing='0' width='100%' border='1' bordercolor='black' bordercolorlight='black' bordercolordark='black'>");
+//--></script>
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+
+<tr valign="top" class="whs6">
+<td bgcolor="#008000" width="10%" class="whs22">
+<p class="whs23">Address</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 1</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 2</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 3</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 4</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 5</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p>&nbsp;</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p>&nbsp;</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p>&nbsp;</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs26">
+<p>Data</td>
+<td width="10%" class="whs27">
+<p>31</td>
+<td width="10%" class="whs27">
+<p>32</td>
+<td width="10%" class="whs27">
+<p>33</td>
+<td width="10%" class="whs27">
+<p>34</td>
+<td width="10%" class="whs27">
+<p>35</td>
+<td width="10%" class="whs27">
+<p>36</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td></tr>
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
+//--></script>
+</table>
+
+<p class="whs19">unicode :</p>
+
+<p class="whs20">if SN = 123456, the memory content after 
+ serialization is:</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells cellspacing="0" width="100%" class="whs1">
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table><table x-use-null-cells cellspacing='0' width='100%' border='1' bordercolor='black' bordercolorlight='black' bordercolordark='black'>");
+//--></script>
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+<col class="whs21">
+
+<tr valign="top" class="whs6">
+<td bgcolor="#008000" width="10%" class="whs22">
+<p class="whs23">Address</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 1</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 2</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 3</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">a + 4</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs25">...</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs23">a + 9</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs23">a + 10</td>
+<td bgcolor="#008000" width="10%" class="whs24">
+<p class="whs23">a + 11</td></tr>
+
+<tr valign="top" class="whs6">
+<td bgcolor="#FFFF00" width="10%" class="whs26">
+<p>Data</td>
+<td width="10%" class="whs27">
+<p>31</td>
+<td width="10%" class="whs27">
+<p>00</td>
+<td width="10%" class="whs27">
+<p>32</td>
+<td width="10%" class="whs27">
+<p>00</td>
+<td width="10%" class="whs27">
+<p>33</td>
+<td width="10%" class="whs27">
+<p>&nbsp;</td>
+<td width="10%" class="whs27">
+<p>00</td>
+<td width="10%" class="whs27">
+<p>36</td>
+<td width="10%" class="whs27">
+<p>00</td></tr>
+<script language='JavaScript'><!--
+if ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4)) document.write("</table></table><table>");
+//--></script>
+</table>
+
+<p>&lt;step&gt; = the SN increment step; it may be a negative number.</p>
+
+<p>Command file example :</p>
+
+<p class=Code>-device T89C51CC01</p>
+
+<p class=Code>-hardware PEAK</p>
+
+<p class=Code>-canbitrate 500</p>
+
+<p class=Code>-operation</p>
+
+<p class=Code>memory FLASH</p>
+
+<p class=Code>erase F</p>
+
+<p class=Code>serialize 0x7F0 12345678900 number 1</p>
+
+<p class="whs17">The address of the serial number must be chosen 
+ with care in order not to exceed the memory size or corrupt the firmware. 
+ Batchisp can detect that the Least Significant Byte of the serial number 
+ is out of range and displays an error message when this situation occurs.</p>
+
+<p class="whs17">&nbsp;</p>
+
+<div placeholder id="footer" class="whs28">
+ <p align="right" class="whs29"><img src="atmel_rvb.gif" x-maintain-ratio="TRUE" height="62px" width="135px" border="0" class="img_whs30"></p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body>
+
+</html>

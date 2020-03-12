@@ -1,0 +1,92 @@
+NEWS - FLIP3
+
+               
+Atmel
+
+Please read the LICENSE file.
+
+
+DESCRIPTION
+-----------
+
+This Atmel In-System Programming software runs under Windows 98/Me/NT/2000/XP/Vista/Seven and Linux.
+
+Communicating with the target device may be done through RS232, CAN or USB link.
+
+This program is named FLIP, which stands for: FLexible In-system Programmer.
+
+
+DOWNLOAD
+--------
+
+This program can be downloaded from the Atmel website: 
+http://www.atmel.com
+
+
+MAIN FEATURES
+-------------
+
+- performs In-System Programming  through RS232, USB or CAN interfaces.
+
+- may be used through its intuitive Graphical User Interface or launched
+  from a DOS window (see the batchisp manual), from an embedded software IDE
+  like KEIL's uVision2, or even from your own application (see the ISP
+  Functions Library manual).
+
+- runs under Windows 9x / Me / NT / 2000 / XP / Vista / Seven / Windows 8 and Linux.
+
+- supports Intel MCS-86 Hexadecimal Object, Code 88 file format for data
+  file loading and saving.
+
+- buffer editing capabilities : fill, search, copy, reset, modify, goto.
+
+- target device memory control : erase, blank check, program, verify,
+  read, security level and special bytes reading and setting.
+
+- parts serialization capability (from batchisp only).
+
+- ISP hardware conditions may be set by software (AutoISP).
+
+- the demo mode emulates ISP operations without any target hardware.
+
+- the debug mode lets you log the traffic on the selected medium.
+
+- on-line help.
+
+
+
+KNOWN BUGS AND LIMITATIONS
+--------------------------
+- batchisp HEX files pathnames should contain neither spaces, nor accentuated
+  characters.
+
+
+
+
+PROBLEMS
+--------
+
+If you find any problem, please report it to
+Atmel Microcontrollers hotline:
+http://support.norway.atmel.com/bin/customer
+
+
+
+CHANGES
+-------
+
+Version 3.4.2; Aug-19-2010
+==========================
+
+ - Add support to KVASER CAN dongle (http://www.kvaser.com/) 
+ - For IXXAT dongle it is possible to select CAN interface : CAN-1 or CAN-2.
+    under Batchisp : CAN-1 is selected using  "-hardware ixxat"
+                     CAN-2 is selected using  "-hardware ixxat_can2"
+ - AT32UC3L064 devices are now supported in this version (batchisp only). 
+ - AT32UC3C0512C, AT32UC3C0256C, AT32UC3C0128C,  AT32UC3C1512C, AT32UC3C1256C, 
+   AT32UC3C1128C, AT32UC3C2512C, AT32UC3C2256C and AT32UC3C2128C devices are 
+   now supported in this version (batchisp only).
+ - A new memory is available for AT32UC3 device : EXT_MEM_DF. This provide batchisp the ability to 
+   program data flash present on most of AT32UC3 KIT. This functionality require a dedicated firmware 
+   provided with ASF.
+  

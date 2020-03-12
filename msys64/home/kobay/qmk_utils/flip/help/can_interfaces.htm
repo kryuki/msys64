@@ -1,0 +1,257 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>CAN Interfaces</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name="template" content="Atmel Template.htt">
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=3318>
+<meta name=layout-width content=976>
+
+
+<!--(Links)=========================================================-->
+
+ <link rel='stylesheet' href='atmel_standard_ns.css'>
+<script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='atmel_standard.css'>");}
+//-->
+</script>
+<style type="text/css">
+<!--
+p.whs1 {font-style: normal;}
+img_whs2 {border: none; width: 404px; height: 327px; border-style: none; border-style: none;}
+img_whs3 {border: none; width: 405px; height: 354px; float: none;}
+img_whs4 {border: none; width: 389px; height: 119px; border-style: none; border-style: none;}
+ol.whs5 {list-style: decimal;}
+img_whs6 {border: none; width: 443px; height: 285px; border-style: none; border-style: none;}
+p.whs7 {font-weight: bold;}
+img_whs8 {border: none; width: 302px; height: 277px; border-style: none; border-style: none;}
+p.whs9 {font-weight: normal;}
+div.whs10 {width: 100%; }
+p.whs11 {text-align: right;}
+img_whs12 {border: none; height: 62px; width: 135px; float: none; border-style: none; border-style: none;}
+-->
+</style>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("TroubleShooting\nCAN Interfaces");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("overview.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<h1>Trouble Shooting CAN Interfaces</h1>
+
+<h2>Cannot open the CAN port</h2>
+
+<p class="whs1">Most of the time, failing to open the <span 
+ style="font-style: italic;"><I>CAN</I></span> port when using <span style="font-style: italic;"><I>FLIP</I></span>, 
+ <span style="font-style: italic;"><I>Batchisp</I></span> or the <span style="font-style: italic;"><I>ISP 
+ Functions Library</I></span> is due to the fact that the <span style="font-style: italic;"><I>API 
+ DLL</I></span> is missing.</p>
+
+<p class="whs1">For information about <span style="font-style: italic;"><I>API</I></span> 
+ and drivers installation, read the <a href="can_pre-installation_requirements.htm">CAN 
+ Pre-Installation Requirements</a> topic.</p>
+
+<h2>The IXXAT CANdy dongle does not work</h2>
+
+<p>The parallel port should be set up as SPP, Normal or AT in your BIOS 
+ settings.</p>
+
+<p>The <span style="font-style: italic;"><I>CANdy</I></span> dongle has to be 
+ connected to the LPT-Port and the power supply before booting the machine.</p>
+
+<p>There is no Windows 2000 driver available for the <span style="font-style: italic;"><I>CANdy</I></span> 
+ dongle.</p>
+
+<p>Start the <span style="font-style: italic;"><I>IXXAT's</I></span> applet in 
+ the Control Panel and check that the dongle you intend to use is installed, 
+ like shown below :</p>
+
+<p><img src="image15.gif" width="404px" height="327px" border="0" class="img_whs2"></p>
+
+<p>If the above information did not help to solve the problem, read <span 
+ style="font-style: italic;"><I>IXXAT's</I></span> <span style="font-weight: bold;"><B>FAQ</B></span>s 
+ at <a href="http://www.ixxat.de/english/support/s_faq_e.shtml">http://www.ixxat.de/english/support/s_faq_e.shtml</a></p>
+
+<h2>IXXAT VCI Driver V3</h2>
+
+<p>As of version 3.4.0, <span style="font-style: italic;"><I>Flip</I></span> supports 
+ the version 3 of the <span style="font-style: italic;"><I>IXXAT VCI</I></span> 
+ driver. With VCI V3, there is no <span style="font-style: italic;"><I>IXXAT</I></span> 
+ applet available to specify the default hardware.</p>
+
+<p>When running <span style="font-style: italic;"><I>Flip</I></span>, The <span 
+ style="font-style: italic;"><I>IXXAT</I></span> hardware to be used can be selected 
+ from a dialog which pops up when the user clicks the <span style="font-weight: bold;"><B>Init</B></span> 
+ button of the <span style="font-style: italic;"><I>CAN Node Setup</I></span> 
+ dialog : </p>
+
+<p><img src="ixxat_hardware.jpg" x-maintain-ratio="TRUE" width="405px" height="354px" border="0" class="img_whs3"></p>
+
+<p>When running <span style="font-style: italic;"><I>batchisp</I></span>, if only 
+ one board is registered, it is selected automatically. If more than one 
+ board is registered, the one to be used is selected through an INI file 
+ named <span style="font-style: italic;"><I>AtCanIxxat.ini</I></span> located 
+ in the same folder than the <span style="font-style: italic;"><I>AtCanIxxat.dll</I></span> 
+ file.</p>
+
+<p>If the board specified within the INI file cannot be found, or if the 
+ INI file does not exist, the first found board is used as fallback.</p>
+
+<h2>The VECTOR's CAN interfaces do not work</h2>
+
+<p>If you get the following message during <span style="font-style: italic;"><I>VECTOR's</I></span> 
+ dongles initialization from <span style="font-style: italic;"><I>FLIP</I></span></p>
+
+<p><img src="image24.gif" width="389px" height="119px" border="0" class="img_whs4"></p>
+
+<p>please read the following instructions.</p>
+
+<p>Before using <span style="font-style: italic;"><I>VECTOR</I></span>'s <span 
+ style="font-style: italic;"><I>CAN</I></span> interfaces to perform <span style="font-style: italic;"><I>ISP</I></span> 
+ with <span style="font-style: italic;"><I>FLIP</I></span>, you must associate 
+ the <span style="font-style: italic;"><I>VECTOR's</I></span> hardware to this 
+ application. Use the <span style="font-style: italic;"><I>VECTOR's</I></span> 
+ applet to do this. The applet may be launched from the <span style="font-style: italic;"><I>Start 
+ &gt; Parameters &gt; Configuration Panel</I></span> menu.</p>
+
+<p>In the following sequence, we will associate the <span style="font-style: italic;"><I>CANpari</I></span> 
+ interface to <span style="font-style: italic;"><I>FLIP</I></span>.</p>
+
+<ol type="1" class="whs5">
+	
+	<li class=kadov-p><p>Launch the <span style="font-style: italic;"><I>VECTOR's</I></span> 
+ applet</p></li>
+</ol>
+
+<p><img src="image17.gif" width="443px" height="285px" border="0" class="img_whs6"></p>
+
+<ol start="2" type="1" class="whs5">
+	
+	<li class=kadov-p><p>Select CANpari channel 1 and click <span style="font-weight: bold;"><B>App 
+ settings</B></span></p></li>
+</ol>
+
+<p class="whs7"><img src="image19.gif" width="302px" height="277px" border="0" class="img_whs8"></p>
+
+<ol start="3" type="1" class="whs5">
+	
+	<li style="font-weight: normal; /*begin!kadov{{*/ font-weight: normal; /*}}end!kadov*/ "
+		class=kadov-p><p class="whs9">Click the <span style="font-weight: bold;"><B>Add</B></span> 
+ button and type &quot;FLIP&quot; for the <span style="font-style: italic;"><I>Application 
+ Name</I></span>. The <span style="font-style: italic;"><I>Application Settings</I></span> 
+ dialog should now display <span style="font-style: italic;"><I>FLIP</I></span>:</p></li>
+</ol>
+
+<p class="whs9"><img src="image21.gif" width="302px" height="277px" border="0" class="img_whs8"></p>
+
+<ol start="4" type="1" class="whs5">
+	
+	<li style="font-weight: normal; /*begin!kadov{{*/ font-weight: normal; /*}}end!kadov*/ "
+		class=kadov-p><p class="whs9">Click <span style="font-weight: bold;"><B>Done</B></span>.</p></li>
+	
+	<li style="font-weight: normal; /*begin!kadov{{*/ font-weight: normal; /*}}end!kadov*/ "
+		class=kadov-p><p class="whs9">In the <span style="font-style: italic;"><I>CAN 
+ Driver Configuration</I></span> dialog, with <span style="font-style: italic;"><I>CANpari 
+ - Channel 1</I></span> still selected, click <span style="font-weight: bold;"><B>Assign 
+ to Application</B></span> and select <span style="font-weight: bold;"><B>FLIP1</B></span> 
+ from the list. The dialog now looks like:</p></li>
+</ol>
+
+<p class="whs7"><img src="image23.gif" width="443px" height="285px" border="0" class="img_whs6"></p>
+
+<ol start="6" type="1" class="whs5">
+	
+	<li style="font-weight: normal; /*begin!kadov{{*/ font-weight: normal; /*}}end!kadov*/ "
+		class=kadov-p><p class="whs9">You may now close 
+ the applet and run <span style="font-style: italic;"><I>FLIP</I></span>.</p></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div placeholder id="footer" class="whs10">
+ <p align="right" class="whs11"><img src="atmel_rvb.gif" x-maintain-ratio="TRUE" height="62px" width="135px" border="0" class="img_whs12"></p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</body>
+
+</html>
