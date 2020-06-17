@@ -42,3 +42,5 @@ cd qmk_firmware
 make crkbd:vayashiko:avrdude
 make crkbd:vayashiko:avrdude
 make crkbd:vayashiko:avrdude
+cd qmk_firmware
+make hifumi:vayashiko:avrdude
