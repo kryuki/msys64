@@ -35,3 +35,10 @@ cd qmk_firmware
 make crkbd:vayashiko:avrdude
 make crkbd:vayashiko:avrdude
 make crkbd:vayashiko:avrdude
+cd msys64
+qmk setup
+cd qmk
+cd qmk_firmware
+make crkbd:vayashiko:avrdude
+make crkbd:vayashiko:avrdude
+make crkbd:vayashiko:avrdude
